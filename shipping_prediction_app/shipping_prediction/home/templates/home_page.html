@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        /* Center content vertically and horizontally */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url('https://miro.medium.com/v2/resize:fit:1358/0*PB5He9TbubxPLv7O');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Overlay for content */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8); /* White overlay with 80% opacity */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Container for content */
+        .container {
+            text-align: center;
+        }
+
+        /* Title */
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Description */
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
+            gap: 20px; /* Spacing between buttons */
+            margin-bottom: 20px;
+        }
+
+        /* Button */
+        .button {
+            padding: 10px 20px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #005a9e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Shipping Prediction App</h1>
+        <p>This app helps you predict shipping days for your orders.</p>
+        <div class="button-container">
+            <a class="button" href="{% url 'predict_shipping_days' %}">Predict Shipping Days</a>
+            <a class="button" href="https://app.powerbi.com/reportEmbed?reportId=357e2bd5-7854-42b6-9adc-694fbfcf6d57&autoAuth=true&ctid=7feeb5c0-34f4-4a4b-8cc0-e59f06920156" target="_blank">View Power BI Report</a>
+        </div>
+    </div>
+</body>
+</html>
